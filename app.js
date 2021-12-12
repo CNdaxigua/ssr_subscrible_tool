@@ -12,6 +12,6 @@ let ENTRY_FILE = './node.txt'
 let str = readSync(ENTRY_FILE)
 
 // Map all the item include `ssr://` and serialize those items
-let result = str.split('\n\n').filter(item => item.includes('ssr://')).join('\r\n')
+let result = str.split('\n\n').filter(item => item.includes('vmess://')).join('\r\n')
 
 writeSync(path.resolve(__dirname, BUILD_DIR, 'index.html'), base64(result))
